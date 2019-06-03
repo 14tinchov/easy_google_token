@@ -1,0 +1,15 @@
+{
+  "name": "easy_google_token",
+  "version": "1.0.0",
+  "description": "Get auth token to OAuth 2.0 for Sevice Accounts",
+  "main": "index.js",
+  "dependencies": {
+    "jsrsasign": "^8.0.12",
+    "axios": "^0.18.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Martin Villalba (14tinchov@gmail.com)",
+  "license": "ISC"
+}
