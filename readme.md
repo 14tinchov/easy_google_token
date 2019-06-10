@@ -1,6 +1,6 @@
 # Easy Google Token
 
-Easy Google Token is a wasy way to get a token with a [Service Account File](https://cloud.google.com/iam/docs/creating-managing-service-account-keys])
+Easy Google Token is a easy way to get a token with a [Service Account File](https://cloud.google.com/iam/docs/creating-managing-service-account-keys])
 
 _*I recommend not using it directly in the Frontend, you could use it in the Backend to get a token and use it in the Frontend or you could create a file with limited access to use it in the Frontend_
 
