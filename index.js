@@ -4,7 +4,9 @@ var KJUR = require('jsrsasign');
 var axios = require('axios');
 
 var EasyGoogleToken = {
-  getTokenWithServiceAccountFile(creds = {}, scopes, callback ) {
+
+  getTokenWithServiceAccountFile: function ( creds, scopes, callback ) {
+    if (creds === undefined) creds = {};
     if (Object.keys(creds).length == 0) { return 'Need Service Account File to continue' };
     if (creds.private_key == null)      { return 'Need private_key in your File to continue' };
     if (creds.private_key_id == null)   { return 'Need private_key_id in your File to continue' };
@@ -26,7 +28,7 @@ var EasyGoogleToken = {
       exp: KJUR.jws.IntDate.get('now + 1hour'),
       aud: 'https://www.googleapis.com/oauth2/v4/token'
     };
-    
+
     const stringHeader = JSON.stringify(header);
     const stringPayload = JSON.stringify(payload);
     var token = KJUR.jws.JWS.sign('RS256', stringHeader, stringPayload, creds.private_key);
